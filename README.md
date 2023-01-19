@@ -1,6 +1,6 @@
 # Cliff Walking: Comparison of Sarsa and Q-Learning
 
-Cliff walking is an environment of a grid world with the cliff. The task is to find an optimal path from starting state to the goal state without falling off the cliff (The following figure is from Sutton & Barton (2015) p.132. 
+Cliff walking is an environment of a grid world with the cliff. The task is to find an optimal path from starting state to the goal state without falling off the cliff (The following figure is from Sutton & Barton (2015) p.132). 
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/94096127/213368192-7c44d0dd-46ae-4cb6-a159-08cacc270428.png">
@@ -28,7 +28,8 @@ This project compares the performance of Sarsa and Q-Learning in cliff walking. 
 <p align="center">
   Q-Learning Pseudocode
 </p>
-
+* reward for the cliff: -100
+* reward for all other states: -1
 * ε for both Sarsa and Q-learning : 0.1 
 * α for both Sarsa and Q-learning : 0.5 
 * γ for both Sarsa and Q-learning: 1 (this is a standard undiscounted, episodic task, with starting and goal states). 
@@ -59,6 +60,8 @@ Sarsa takes a safe path. Since the policy that drives the learning of action-val
 ## 2. Impact of Epsilon
 
 ### Experiment Setting
+* reward for the cliff: -100
+* reward for all other states: -1
 * ε for action selection: 0.1 
 * ε values for policy update compared: 0.1, 0.01, 0.001, 0 
 * α: 0.5 
@@ -101,6 +104,7 @@ As shown above, the smaller the ε value for policy update is, the closer it is 
 * α: 0.5 
 * γ: 1 (this is a standard undiscounted, episodic task, with starting and goal states). 
 * The reward for falling off the cliff compared: -20, -50, -100 
+* reward for all other states: -1
 * The number of episodes: 500. 
 * The sum of rewards per episode: Each learning is repeated 100 times with the above-mentioned setting and averaged. 
 
