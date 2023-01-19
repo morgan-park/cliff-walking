@@ -28,6 +28,7 @@ This project compares the performance of Sarsa and Q-Learning in cliff walking. 
 <p align="center">
   Q-Learning Pseudocode
 </p>
+
 * reward for the cliff: -100
 * reward for all other states: -1
 * ε for both Sarsa and Q-learning : 0.1 
